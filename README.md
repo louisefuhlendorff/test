@@ -9,7 +9,7 @@ Her er min første Github dimmer (markdown) (1 hashtag # svarer til h1 og 2 hash
 
 ## Hej Louise, jeg prøver lige at skrive lidt her.
 
-
+# hej numser
 
 Nedenfor ses hvordan man laver et link
 * [Multimusen](http://multimusen.dk) 
