@@ -5,6 +5,8 @@ Her er min første Github dimmer (markdown) (1 hashtag # svarer til h1 og 2 hash
 
 # Jeg har styr på det her
 
+## Laver lige en test 
+
 
 
 Nedenfor ses hvordan man laver et link
