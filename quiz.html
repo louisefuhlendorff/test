@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>quiz</title>
+</head>
+
+<body>
+<h1 id="navnet"></h1>
+<br>
+<br>
+<p>Du kommer gående langs en sti i en skov, men pludselig deler vejen sig. Og du må vælge om du skal gå mod venstre eller højre:</p>
+<input type="button" id="venstre" value="Venstre" onClick="fvenstre()">
+<input type="button" id="hojre" value="Højre" onClick="fhojre()">
+<div style="display: none" id="spg0">
+  <p>Du følger vejen mod højre og kommer til en lysning. </p>
+  <table width="200" border="0">
+    <tbody>
+      <tr>
+        <td><input type="radio" name="s0" id="svar01" value="en"></td>
+        <td><p>Kig efter blomster du kan plukke </p></td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="s0" id="svar02" value="en"></td>
+        <td><p>Kig på træerne</p></td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="s0" id="svar03" value="en"></td>
+        <td><p>Vend tilbage langs stien</p></td>
+      </tr>
+    </tbody>
+  </table>
+  <input type="button" id="btnSubmit0" value="Vælg" onClicK="fSporgsmal0()">
+</div>
+<div style="display: none" id="spg1">
+  <p>Du går langs stien, men møder pludselig en trold. Der vil have dig til at vælge mellem fire blomster: </p>
+  <p>Den gule
+    <input type="radio" name="s1" id="svar1" value="en">
+  </p>
+  <p>Den røde
+    <input type="radio" name="s1" id="svar2" value="to">
+  </p>
+  <p>Den pink
+    <input type="radio" name="s1" id="svar3" value="tre">
+  </p>
+  <p>Den lilla
+    <input type="radio" name="s1" id="svar4" value="fire">
+  </p>
+  <input type="button" name="btnSubmit" id="btnSubmit" value="Vælg" onClicK="fSporgsmal1()">
+</div>
+<p id="udfald"></p>
+<script type="text/javascript">
+var navn = prompt("Hvad hedder du?");
+	document.getElementById("navnet").innerHTML = "Eventyret om da" + " " + navn + " " + "gik en tur i skoven";
+	
+		
+	function fvenstre() {
+	document.getElementById('spg1').style.display = "block";
+	document.getElementById('spg0').style.display = "none";
+		
+		document.getElementById('udfald').style.display = "none";
+	}
+	function fhojre() {
+		document.getElementById('spg0').style.display = "block";
+		document.getElementById('spg1').style.display = "none";
+		document.getElementById('udfald').style.display = "none";
+	}
+   
+	function fSporgsmal0() {
+		this.rigtigtsvar0 = document.getElementById("svar03");
+		
+		document.getElementById('udfald').style.display = "block";
+if (rigtigtsvar0.checked === true) {
+	document.getElementById('spg0').style.display = "none";
+document.getElementById("udfald").innerHTML = "Du vender tilbage til hvor stien delte sig";}
+		
+		else {
+			
+		document.getElementById("udfald").innerHTML = "Der er ikke rigtig noget.";}
+		}
+	
+	function fSporgsmal1() {
+		this.rigtigtsvar1 = document.getElementById("svar2");
+			
+		document.getElementById('udfald').style.display = "block";
+		document.getElementById('spg1').style.display = "none";
+		
+if (rigtigtsvar1.checked === true) {
+	document.getElementById("udfald").innerHTML = "Du valgte tydeligvis rigtigt og bliver erklæret troldenes hersker!"}
+else {document.getElementById("udfald").innerHTML = "Troldene virker ikke begejstret for dit valg og smider dig ud af skoven."}
+					   }
+	</script>
+</body>
+</html>
